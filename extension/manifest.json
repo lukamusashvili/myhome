@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "myhome.ge Token Grabber",
+  "version": "0.1.0",
+  "description": "Captures your myhome.ge global-authorization token so you don't have to copy it from DevTools.",
+  "permissions": ["webRequest", "storage"],
+  "host_permissions": ["*://*.tnet.ge/*", "*://*.myhome.ge/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "externally_connectable": {
+    "matches": ["http://localhost:5173/*"]
+  }
+}
