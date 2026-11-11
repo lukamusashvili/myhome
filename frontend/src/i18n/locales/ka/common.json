@@ -1,0 +1,429 @@
+{
+  "app": {
+    "name": "Agent OS",
+    "readOnlyBanner": "თქვენი საცდელი პერიოდი დასრულდა — ყველაფრის ნახვა შეგიძლიათ, თუმცა ცვლილებები შეჩერებულია.",
+    "seeOptions": "ვარიანტების ნახვა"
+  },
+  "language": {
+    "label": "ენა"
+  },
+  "nav": {
+    "dashboard": "მთავარი",
+    "properties": "ობიექტები",
+    "clients": "კლიენტები",
+    "tasks": "დავალებები",
+    "shared": "გაზიარებული",
+    "import": "იმპორტი",
+    "inquiries": "მომართვები",
+    "archive": "არქივი და წაშლილები",
+    "settings": "პარამეტრები",
+    "help": "დახმარება / უკუკავშირი",
+    "admin": "ადმინი",
+    "home": "მთავარი",
+    "more": "მეტი"
+  },
+  "actions": {
+    "save": "შენახვა",
+    "cancel": "გაუქმება",
+    "confirm": "დადასტურება",
+    "close": "დახურვა",
+    "open": "გახსნა",
+    "edit": "რედაქტირება",
+    "delete": "წაშლა",
+    "back": "უკან",
+    "add": "დამატება",
+    "remove": "მოშორება",
+    "restore": "აღდგენა",
+    "search": "ძიება",
+    "copy": "კოპირება",
+    "copied": "დაკოპირდა",
+    "continue": "გაგრძელება",
+    "retry": "თავიდან ცდა",
+    "loading": "იტვირთება…",
+    "saving": "ინახება…"
+  },
+  "enums": {
+    "district": {
+      "Vake": "ვაკე",
+      "Saburtalo": "საბურთალო",
+      "Vera": "ვერა",
+      "Mtatsminda": "მთაწმინდა",
+      "Sololaki": "სოლოლაკი",
+      "Old Tbilisi": "ძველი თბილისი",
+      "Avlabari": "ავლაბარი",
+      "Chugureti": "ჩუღურეთი",
+      "Didube": "დიდუბე",
+      "Dighomi": "დიღომი",
+      "Didi Dighomi": "დიდი დიღომი",
+      "Digomi Massive": "დიღმის მასივი",
+      "Vashlijvari": "ვაშლიჯვარი",
+      "Nadzaladevi": "ნაძალადევი",
+      "Gldani": "გლდანი",
+      "Mukhiani": "მუხიანი",
+      "Isani": "ისანი",
+      "Samgori": "სამგორი",
+      "Varketili": "ვარკეთილი",
+      "Vazisubani": "ვაზისუბანი",
+      "Krtsanisi": "კრწანისი",
+      "Ortachala": "ორთაჭალა",
+      "Lisi": "ლისი",
+      "Bagebi": "ბაგები",
+      "Tskneti": "წყნეთი"
+    },
+    "city": {
+      "Tbilisi": "თბილისი"
+    },
+    "propertyType": {
+      "Any": "ნებისმიერი",
+      "Apartment": "ბინა",
+      "House": "სახლი",
+      "Townhouse": "თაუნჰაუსი",
+      "Commercial": "კომერციული",
+      "Land": "მიწა"
+    },
+    "condition": {
+      "Any": "ნებისმიერი",
+      "Newly renovated": "ახალი გარემონტებული",
+      "Old renovation": "ძველი გარემონტებული",
+      "White frame": "თეთრი კარკასი",
+      "Green frame": "მწვანე კარკასი",
+      "Black frame": "შავი კარკასი"
+    },
+    "buildingType": {
+      "New building": "ახალი აშენებული",
+      "Old build": "ძველი აშენებული",
+      "Soviet series": "საბჭოთა პროექტი",
+      "Villa": "ვილა"
+    },
+    "contactType": {
+      "Owner": "მესაკუთრე",
+      "Agent": "აგენტი",
+      "Agency": "სააგენტო",
+      "Unknown": "უცნობია"
+    },
+    "commissionModel": {
+      "Commission On Top": "საკომისიო ფასს ემატება",
+      "Commission Included": "საკომისიო ფასში შედის"
+    },
+    "archiveReason": {
+      "Sold": "გაიყიდა",
+      "Rented": "გაქირავდა",
+      "No longer available": "აღარ არის ხელმისაწვდომი",
+      "Inactive": "არააქტიური",
+      "Other": "სხვა"
+    },
+    "feedback": {
+      "No Response": "პასუხი არ არის",
+      "Viewed": "ნანახია",
+      "Interested": "დაინტერესებულია",
+      "Wants Showing": "სურს ნახვა",
+      "Too Expensive": "ძალიან ძვირია",
+      "Not Interested": "არ არის დაინტერესებული"
+    },
+    "dealType": {
+      "Any": "ნებისმიერი",
+      "Sale": "იყიდება",
+      "Rent": "ქირავდება",
+      "Daily rent": "დღიური ქირა"
+    },
+    "propertyStatus": {
+      "active": "აქტიური",
+      "needs_verification": "საჭიროებს გადამოწმებას",
+      "archived": "დაარქივებული"
+    },
+    "lifecycle": {
+      "active": "აქტიური",
+      "paused": "შეჩერებული",
+      "closed": "დახურული"
+    },
+    "taskType": {
+      "Call": "ზარი",
+      "Follow-up": "განმეორებითი კონტაქტი",
+      "Meeting": "შეხვედრა",
+      "Verification": "გადამოწმება",
+      "Other": "სხვა"
+    },
+    "yesNo": {
+      "Yes": "დიახ",
+      "No": "არა",
+      "Unknown": "უცნობია"
+    },
+    "floorPref": {
+      "Any": "ნებისმიერი",
+      "Not ground floor": "არა პირველი სართული",
+      "Not top floor": "არა ბოლო სართული",
+      "Above 3rd floor": "მე-3 სართულის ზემოთ"
+    },
+    "trashKind": {
+      "Property": "ობიექტი",
+      "Client": "კლიენტი"
+    },
+    "source": {
+      "Manual": "ხელით დამატებული",
+      "MyHome.ge": "MyHome.ge",
+      "SS.ge": "SS.ge"
+    }
+  },
+  "dates": {
+    "months": [
+      "იან",
+      "თებ",
+      "მარ",
+      "აპრ",
+      "მაი",
+      "ივნ",
+      "ივლ",
+      "აგვ",
+      "სექ",
+      "ოქტ",
+      "ნოე",
+      "დეკ"
+    ],
+    "monthsLong": [
+      "იანვარი",
+      "თებერვალი",
+      "მარტი",
+      "აპრილი",
+      "მაისი",
+      "ივნისი",
+      "ივლისი",
+      "აგვისტო",
+      "სექტემბერი",
+      "ოქტომბერი",
+      "ნოემბერი",
+      "დეკემბერი"
+    ],
+    "days": [
+      "კვ",
+      "ორშ",
+      "სამ",
+      "ოთხ",
+      "ხუთ",
+      "პარ",
+      "შაბ"
+    ],
+    "daysLong": [
+      "კვირა",
+      "ორშაბათი",
+      "სამშაბათი",
+      "ოთხშაბათი",
+      "ხუთშაბათი",
+      "პარასკევი",
+      "შაბათი"
+    ],
+    "short": "{{day}} {{month}}",
+    "long": "{{weekday}}, {{day}} {{month}}",
+    "withWeekday": "{{weekday}}, {{day}} {{month}}",
+    "today": "დღეს",
+    "tomorrow": "ხვალ",
+    "yesterday": "გუშინ",
+    "noDate": "თარიღის გარეშე",
+    "goodMorning": "დილა მშვიდობისა",
+    "goodAfternoon": "გამარჯობა",
+    "goodEvening": "საღამო მშვიდობისა"
+  },
+  "format": {
+    "from": "{{value}}-დან",
+    "upTo": "{{value}}-მდე",
+    "areaPlus": "{{value}}+ მ²",
+    "areaUpTo": "{{value}} მ²-მდე",
+    "area": "{{value}} მ²"
+  },
+  "ui": {
+    "noPhoto": "ფოტო არ არის",
+    "badge": {
+      "active": "აქტიური",
+      "needsVerification": "საჭიროებს გადამოწმებას",
+      "archived": "დაარქივებული",
+      "shared": "გაზიარებული · {{name}}",
+      "myPropertyShared": "ჩემი ობიექტი · გაზიარებული",
+      "myProperty": "ჩემი ობიექტი"
+    },
+    "card": {
+      "favorite": "რჩეული",
+      "facts": "{{area}} მ² · {{count}} საძინებელი · სართული {{floor}}/{{floors}}",
+      "parking": " · პარკინგი",
+      "needsCheck": "საჭიროებს შემოწმებას · ბოლოს გადამოწმდა {{date}}",
+      "verified": "გადამოწმდა {{date}}",
+      "open": "გახსნა",
+      "addTask": "დავალების დამატება",
+      "stopSharing": "გაზიარების შეწყვეტა",
+      "shareWithAgency": "სააგენტოსთვის გაზიარება",
+      "archive": "დაარქივება"
+    },
+    "task": {
+      "openClient": "{{name}} — გახსნა",
+      "openProperty": "ობიექტის გახსნა",
+      "markNotDone": "შეუსრულებლად მონიშვნა",
+      "markComplete": "შესრულებულად მონიშვნა",
+      "edit": "დავალების რედაქტირება",
+      "delete": "დავალების წაშლა"
+    },
+    "calc": {
+      "title": "ფასის გაანგარიშება",
+      "portalPrice": "საწყისი ფასი პორტალზე",
+      "ownerReceives": "მესაკუთრე იღებს",
+      "yourCommission": "თქვენი საკომისიო",
+      "myListingPrice": "ჩემი განცხადების ფასი",
+      "suggests": "Agent OS ამ პირობებისთვის გირჩევთ {{price}}-ს — თქვენ საკუთარ ფასს აქვეყნებთ.",
+      "explainIncluded": "მესაკუთრის მიერ გამოცხადებულ ფასში თქვენი საკომისიო უკვე შედის.",
+      "explainOnTop": "მესაკუთრე სრულად იღებს გამოცხადებულ ფასს; თქვენი საკომისიო არის ის, რასაც მას ზემოდან ამატებთ."
+    }
+  },
+  "shell": {
+    "noAgency": "სააგენტოს გარეშე",
+    "trialEnded": "მხოლოდ ნახვა · საცდელი პერიოდი დასრულდა",
+    "trialActive": "სრული წვდომა საცდელ პერიოდში",
+    "searchPlaceholder": "ობიექტების, კლიენტების, დავალებების ძიება…",
+    "noResults": "„{{query}}“ — შედეგები არ მოიძებნა",
+    "properties": "ობიექტები",
+    "clients": "კლიენტები",
+    "tasks": "დავალებები",
+    "addProperty": "ობიექტის დამატება",
+    "importProperty": "ობიექტის იმპორტი",
+    "addClient": "კლიენტის დამატება",
+    "addTask": "დავალების დამატება",
+    "logInquiry": "მომართვის დაფიქსირება",
+    "quickAdd": "სწრაფი დამატება",
+    "overdueTasks_one": "{{count}} ვადაგადაცილებული დავალება",
+    "overdueTasks_other": "{{count}} ვადაგადაცილებული დავალება"
+  },
+  "domain": {
+    "propertyRemoved": "ობიექტი წაშლილია",
+    "notSpecified": "არ არის მითითებული",
+    "internalListing": "Agent OS-ის განცხადება",
+    "sourceRef": "წყარო · {{source}} {{ref}}",
+    "match": {
+      "differentDistrict": "სხვა უბანი — {{district}}",
+      "bedrooms": "{{count}} საძინებელი",
+      "bedroomsShort_one": "სასურველზე {{count}} საძინებლით ნაკლები",
+      "bedroomsShort_other": "სასურველზე {{count}} საძინებლით ნაკლები",
+      "parking": "პარკინგი",
+      "noParking": "პარკინგი დადასტურებული არ არის",
+      "aboveBudget": "ბიუჯეტზე {{amount}}-ით მეტი",
+      "belowBudget": "მინიმალურ ბიუჯეტზე {{amount}}-ით ნაკლები",
+      "withinBudget": "ბიუჯეტის ფარგლებში",
+      "belowArea": "სასურველ ფართზე {{value}} მ²-ით ნაკლები",
+      "aboveArea": "სასურველ ფართზე {{value}} მ²-ით მეტი",
+      "typeIs": "ტიპი: {{type}}",
+      "needsVerification": "შეთავაზებამდე საჭიროებს გადამოწმებას",
+      "lastVerified_one": "ბოლოს გადამოწმდა {{count}} დღის წინ",
+      "lastVerified_other": "ბოლოს გადამოწმდა {{count}} დღის წინ"
+    }
+  },
+  "activity": {
+    "imported": "იმპორტირებულია {{source}}-დან",
+    "importedRef": "იმპორტირებულია {{source}}-დან · {{ref}}",
+    "created": "ობიექტი შეიქმნა",
+    "updated": "ობიექტის დეტალები განახლდა",
+    "archived": "დაარქივდა — {{reason}}",
+    "reactivated": "ხელახლა გააქტიურდა",
+    "published": "გამოქვეყნდა {{portal}}-ზე — #{{id}}",
+    "sharedWith": "გაზიარდა: {{agency}}",
+    "sharingStopped": "გაზიარება შეწყდა",
+    "verified": "მოინიშნა გადამოწმებულად",
+    "sentTo": "გაეგზავნა {{name}}-ს {{price}}-ად",
+    "fromInquiry": "შეიქმნა მომართვიდან.",
+    "fromInquiryAbout": "შეიქმნა მომართვიდან ობიექტზე: {{property}}."
+  },
+  "toast": {
+    "readOnly": "მხოლოდ ნახვის რეჟიმი — ცვლილებებისთვის განაახლეთ გეგმა",
+    "reverted": "{{error}} — ცვლილება გაუქმდა",
+    "couldntSave": "ვერ შეინახა: {{what}}",
+    "couldntSaveActivity": "აქტივობის ისტორია ვერ შეინახა",
+    "couldntLoad": "ვერ ჩაიტვირთა {{what}}: {{error}}",
+    "serverError": "სერვერის შეცდომა",
+    "what": {
+      "changes": "ცვლილებები",
+      "client": "კლიენტი",
+      "requirement": "მოთხოვნა",
+      "property": "ობიექტი",
+      "task": "დავალება",
+      "inquiry": "მომართვა",
+      "offer": "შეთავაზება",
+      "trash": "ბოლოს წაშლილები",
+      "profile": "თქვენი პროფილი",
+      "properties": "ობიექტები",
+      "clients": "კლიენტები",
+      "requirements": "მოთხოვნები",
+      "sharedRequirements": "გაზიარებული მოთხოვნები",
+      "tasks": "დავალებები",
+      "sentOffers": "გაგზავნილი შეთავაზებები",
+      "inquiries": "მომართვები",
+      "activity": "აქტივობის ისტორია",
+      "favorite": "რჩეული",
+      "feedback": "უკუკავშირი",
+      "archive": "დაარქივება",
+      "delete": "წაშლა",
+      "permanentDelete": "სამუდამო წაშლა",
+      "publishedId": "გამოქვეყნებული განცხადების ID",
+      "restore": "აღდგენა",
+      "sharing": "გაზიარება"
+    },
+    "propertySaved": "ობიექტი შენახულია",
+    "propertyUpdated": "ობიექტი განახლდა",
+    "couldntSaveProperty": "ობიექტი ვერ შეინახა",
+    "addedFavorite": "დაემატა რჩეულებში",
+    "removedFavorite": "წაიშალა რჩეულებიდან",
+    "archivedAs": "ობიექტი დაარქივდა მიზეზით: „{{reason}}“",
+    "activeAgain": "ობიექტი კვლავ აქტიურია",
+    "movedToTrash": "გადავიდა ბოლოს წაშლილებში",
+    "joinAgencyFirst": "გაზიარებამდე შეუერთდით სააგენტოს პარამეტრებში",
+    "sharedWith": "გაზიარდა: {{agency}}",
+    "stoppedSharing": "გაზიარება შეწყდა",
+    "verifiedToday": "დღეს მოინიშნა გადამოწმებულად",
+    "clientCreated": "კლიენტი შეიქმნა",
+    "clientUpdated": "კლიენტი განახლდა",
+    "requirementUpdated": "მოთხოვნა განახლდა",
+    "requirementCreated": "მოთხოვნა შეიქმნა",
+    "requirementResumed": "მოთხოვნა კვლავ აქტიურია",
+    "requirementPaused": "მოთხოვნა შეჩერდა",
+    "requirementClosed": "მოთხოვნა დაიხურა",
+    "requirementShared": "მოთხოვნა გაზიარდა: {{agency}} — კლიენტი ანონიმური რჩება",
+    "requirementUnshared": "მოთხოვნის გაზიარება შეწყდა",
+    "taskCreated": "დავალება შეიქმნა",
+    "taskUpdated": "დავალება განახლდა",
+    "taskCompleted": "დავალება შესრულდა",
+    "taskDeleted": "დავალება წაიშალა",
+    "markedAs": "მოინიშნა: „{{feedback}}“",
+    "inquirySaved": "მომართვა შენახულია",
+    "addedToClients": "{{name}} დაემატა თქვენს კლიენტებს",
+    "inquiryRemoved": "მომართვა წაიშალა",
+    "clientRestored": "{{name}} დაბრუნდა თქვენს კლიენტებში",
+    "restored": "{{name}} აღდგა",
+    "purged": "სამუდამოდ წაიშალა",
+    "agencyChanged_one": "სააგენტო შეიცვალა: {{agency}} — {{count}} გაზიარებული ჩანაწერის გაზიარება შეწყდა",
+    "agencyChanged_other": "სააგენტო შეიცვალა: {{agency}} — {{count}} გაზიარებული ჩანაწერის გაზიარება შეწყდა",
+    "agencyChangedNone": "სააგენტო შეიცვალა: {{agency}}",
+    "couldntChangeAgency": "სააგენტო ვერ შეიცვალა",
+    "previewReadOnly": "მხოლოდ ნახვის რეჟიმის გადახედვა ამ სესიისთვის",
+    "fullAccess": "სრული წვდომა აღდგა",
+    "profileSaved": "პროფილი შენახულია",
+    "couldntSaveProfile": "პროფილი ვერ შეინახა"
+  },
+  "errors": {
+    "requestFailed": "მოთხოვნა ვერ შესრულდა (HTTP {{status}})",
+    "server": {
+      "missingPortalToken": "პორტალის ტოკენი არ არის — გახსენით პორტალი ავტორიზებულ მდგომარეობაში და სცადეთ თავიდან.",
+      "badRequest": "მოთხოვნა არასწორად არის ფორმირებული. გადატვირთეთ გვერდი და სცადეთ თავიდან.",
+      "propertyNotFound": "ობიექტი ვერ მოიძებნა",
+      "ssEmpty": "SS.ge-მ ცარიელი პასუხი დააბრუნა",
+      "idNumeric": "ID უნდა იყოს რიცხვი",
+      "trialEnded": "საცდელი პერიოდი დასრულდა, ამიტომ თქვენი სამუშაო სივრცე მხოლოდ ნახვის რეჟიმშია",
+      "pendingApproval": "თქვენი ანგარიში ელოდება Agent OS-ის დადასტურებას",
+      "notOwnerProperty": "ეს ობიექტი თქვენ არ გეკუთვნით",
+      "notOwnerPhoto": "ეს ფოტო თქვენ არ გეკუთვნით",
+      "conflict": "ეს ობიექტი სხვაგან შეიცვალა (სხვა ჩანართში ან მოწყობილობაზე). გადატვირთეთ გვერდი უახლესი ვერსიის სანახავად და ცვლილება თავიდან შეიტანეთ.",
+      "notFound": "ვერ მოიძებნა",
+      "myhomeEmpty": "MyHome-მა ცარიელი პასუხი დააბრუნა",
+      "myhomePhotoNotStored": "MyHome-მა ფოტო მიიღო, მაგრამ არ შეინახა, ამიტომ არაფერი გამოქვეყნებულა",
+      "noSession": "სისტემიდან გამოსული ხართ. შედით თავიდან.",
+      "sessionExpired": "სესიას ვადა გაუვიდა. შედით თავიდან.",
+      "myhomeLocations": "MyHome-ის მდებარეობების ძიება ვერ მოხერხდა",
+      "exchangeRate": "USD/GEL კურსის მიღება ვერ მოხერხდა",
+      "agentNotFound": "აგენტი ვერ მოიძებნა",
+      "agencyRequired": "სააგენტოს სახელი სავალდებულოა",
+      "adminRequired": "საჭიროა ადმინისტრატორის წვდომა"
+    }
+  }
+}

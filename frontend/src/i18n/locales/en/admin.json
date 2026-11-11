@@ -1,0 +1,126 @@
+{
+  "title": "Admin",
+  "subtitle": "Everyone and everything in Agent OS — not scoped to your own account.",
+  "tabs": {
+    "agents": "Agents",
+    "customers": "Customers",
+    "properties": "Properties"
+  },
+  "waiting": "{{count}} WAITING",
+  "pager": {
+    "total": "{{count}} total",
+    "page": "Page {{page}} of {{pages}}"
+  },
+  "unnamedAgent": "Unnamed agent",
+  "deletedBadge": "DELETED",
+  "role": {
+    "agent": "Agent",
+    "admin": "Admin"
+  },
+  "trialStatus": {
+    "active": "Active",
+    "expired": "Expired"
+  },
+  "agents": {
+    "loadFailed": "Couldn't load agents",
+    "updated": "Agent updated",
+    "saveFailed": "Couldn't save agent",
+    "emptyTitle": "No agents",
+    "emptyBody": "No one has signed up yet.",
+    "cols": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "approved": "Approved",
+      "trial": "Trial",
+      "joined": "Joined"
+    },
+    "noName": "No name yet",
+    "approvedBadge": "APPROVED",
+    "pendingBadge": "PENDING",
+    "editTitle": "Edit agent",
+    "name": "Name",
+    "phone": "Phone",
+    "city": "City",
+    "roleLabel": "Role",
+    "trialLabel": "Trial status",
+    "approvedLabel": "Approved",
+    "approvedHint": "Required before they can sign in to the real app."
+  },
+  "clients": {
+    "loadFailed": "Couldn't load clients",
+    "created": "Client created",
+    "updated": "Client updated",
+    "saveFailed": "Couldn't save client",
+    "deleted": "Client deleted",
+    "deleteFailed": "Couldn't delete client",
+    "add": "Add client",
+    "emptyTitle": "No clients",
+    "emptyBody": "Nothing here yet.",
+    "cols": {
+      "name": "Name",
+      "phone": "Phone",
+      "status": "Status",
+      "lastContact": "Last contact",
+      "owner": "Owner"
+    },
+    "deleteTitle": "Delete client?",
+    "deleteBody": "{{name}} will be permanently deleted. This can't be undone.",
+    "name": "Name",
+    "phone": "Phone",
+    "status": "Status",
+    "owner": "Owner",
+    "ownerHint": "The agent this client belongs to.",
+    "me": "Me",
+    "notes": "Notes"
+  },
+  "properties": {
+    "loadFailed": "Couldn't load properties",
+    "created": "Property created",
+    "updated": "Property updated",
+    "saveFailed": "Couldn't save property",
+    "deleted": "Property permanently deleted",
+    "deleteFailed": "Couldn't delete property",
+    "add": "Add property",
+    "emptyTitle": "No properties",
+    "emptyBody": "Nothing here yet.",
+    "cols": {
+      "address": "Address",
+      "district": "District",
+      "type": "Type",
+      "deal": "Deal",
+      "price": "Price",
+      "status": "Status",
+      "owner": "Owner"
+    },
+    "deleteTitle": "Permanently delete property?",
+    "deleteBody": "{{address}} will be permanently deleted, including from the owning agent's view. This can't be undone.",
+    "editTitle": "Edit {{title}}",
+    "property": "property",
+    "fields": {
+      "district": "District",
+      "city": "City",
+      "address": "Address",
+      "type": "Type",
+      "dealType": "Deal type",
+      "status": "Status",
+      "area": "Area (m²)",
+      "rooms": "Rooms",
+      "beds": "Bedrooms",
+      "baths": "Bathrooms",
+      "floor": "Floor",
+      "floors": "Total floors",
+      "condition": "Condition",
+      "buildingType": "Building type",
+      "price": "Price (USD)",
+      "portalPrice": "Portal price",
+      "parking": "Parking",
+      "balcony": "Balcony",
+      "deleted": "Deleted",
+      "deletedHint": "Hides it from the owning agent's normal view."
+    }
+  },
+  "lookups": {
+    "ssNeedsExtension": "Connect the extension and open home.ss.ge while logged in first"
+  }
+}

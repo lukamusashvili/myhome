@@ -1,0 +1,293 @@
+{
+  "common": {
+    "addTask": "Add Task",
+    "addTaskLower": "Add task",
+    "callOwnerTitle": "Call property owner",
+    "open": "Open",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove favorite",
+    "stopSharing": "Stop sharing",
+    "shareWithAgency": "Share with agency",
+    "reactivate": "Reactivate",
+    "archive": "Archive",
+    "area": "{{value}} m²",
+    "floorOf": "{{floor}} / {{floors}}",
+    "notProvided": "Not provided"
+  },
+  "list": {
+    "title": "Properties",
+    "subtitle": "{{count}} shown · your database and everything colleagues share with you",
+    "addProperty": "Add Property",
+    "importProperty": "Import Property",
+    "tabs": {
+      "All": "All",
+      "Active": "Active",
+      "Needs Verification": "Needs Verification",
+      "Archived": "Archived",
+      "Favorites": "Favorites"
+    },
+    "sources": {
+      "All Properties": "All Properties",
+      "My Properties": "My Properties",
+      "Shared Properties": "Shared Properties"
+    },
+    "filters": "Filters",
+    "filter": {
+      "location": "Location",
+      "anyDistrict": "Any district",
+      "priceFrom": "Price from",
+      "priceTo": "Price to",
+      "areaFrom": "Area from (m²)",
+      "roomsMin": "Rooms (min)",
+      "bedsMin": "Bedrooms (min)",
+      "propertyType": "Property type",
+      "anyType": "Any type",
+      "parking": "Parking",
+      "parkingOnly": "Parking only",
+      "clear": "Clear filters"
+    },
+    "empty": {
+      "title": "No properties match",
+      "filtered": "Loosen the filters or switch tab — your database is bigger than this view.",
+      "none": "Start by importing your first property from MyHome.ge.",
+      "import": "Import property"
+    },
+    "table": {
+      "id": "ID",
+      "property": "Property",
+      "price": "Price",
+      "area": "Area",
+      "beds": "Beds",
+      "floor": "Floor",
+      "status": "Status",
+      "source": "Source",
+      "verified": "Verified"
+    }
+  },
+  "details": {
+    "notFound": "Property not found",
+    "notFoundBody": "It may have been deleted.",
+    "back": "Back to Properties",
+    "edit": "Edit",
+    "stopSharing": "Stop Sharing",
+    "shareWithAgency": "Share with Agency",
+    "reactivateProperty": "Reactivate property",
+    "archiveProperty": "Archive property",
+    "deleteProperty": "Delete property",
+    "deleteConfirmTitle": "Delete this property?",
+    "deleteConfirmBody": "It moves to Recently Deleted and can be restored for 30 days.",
+    "delete": "Delete",
+    "contact": "Contact {{name}}",
+    "verifiedToday": "Verified today",
+    "verifiedAgo_one": "Verified {{count}} day ago",
+    "verifiedAgo_other": "Verified {{count}} days ago",
+    "tabs": {
+      "Overview": "Overview",
+      "Owner & Commission": "Owner & Commission",
+      "Activity": "Activity",
+      "Sent to Clients": "Sent to Clients"
+    },
+    "overview": {
+      "title": "Property details",
+      "propertyType": "Property type",
+      "dealType": "Deal type",
+      "city": "City",
+      "district": "District",
+      "address": "Address",
+      "area": "Area",
+      "rooms": "Rooms",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "floor": "Floor",
+      "totalFloors": "Total floors",
+      "condition": "Condition",
+      "buildingType": "Building type",
+      "parking": "Parking",
+      "balcony": "Balcony",
+      "keyFacts": "Key facts",
+      "building": "Building"
+    },
+    "sourceListing": {
+      "title": "Source listing",
+      "hint": "Where this property was found — the owner's or another agent's advert, not your own.",
+      "importedFrom": "Imported from {{source}}",
+      "addedManually": "Added manually",
+      "reference": "Reference: {{ref}}",
+      "openOriginal": "Open original listing",
+      "noLink": "No link saved for this listing."
+    },
+    "published": {
+      "title": "My published listings",
+      "hintMine": "Your own adverts. Publish from here, or add the IDs of adverts you posted yourself.",
+      "hintShared": "Adverts published by {{name}}.",
+      "publishMyHome": "Publish to MyHome.ge",
+      "publishSS": "Publish to SS.ge",
+      "openListing": "Open listing",
+      "noLink": "No link saved",
+      "notYet": "Not published by you on MyHome.ge or SS.ge yet.",
+      "addIds": "Add listing IDs"
+    },
+    "sharedBy": "Shared by {{name}}",
+    "sharedPrivacy": "Owner name, phone and private notes stay with {{name}}. Agree the split directly before you offer it to a client.",
+    "owner": {
+      "title": "Owner & contact",
+      "privateBadge": "PRIVATE — ONLY VISIBLE TO YOU",
+      "contactType": "Contact type",
+      "contactName": "Contact name",
+      "phone": "Phone",
+      "cooperates": "Cooperates with agency",
+      "commissionModel": "Commission model",
+      "commission": "Commission",
+      "portalPrice": "Original portal price",
+      "listingPrice": "My listing price",
+      "negotiableTo": "Negotiable to",
+      "commissionAmount": "Commission amount",
+      "notRecorded": "Not recorded yet",
+      "notConfirmed": "Not confirmed yet",
+      "agentNotes": "Agent notes",
+      "noNotes": "No notes yet. Write down what the owner said on the phone — it is the part you forget first.",
+      "lastVerified": "Last verified",
+      "nextFollowUp": "Next follow-up",
+      "notSet": "Not set",
+      "markVerified": "Mark as Verified",
+      "editPrivate": "Edit private details"
+    },
+    "activity": {
+      "empty": "Nothing recorded yet."
+    },
+    "sent": {
+      "empty": "This property hasn't been sent to anyone yet.",
+      "sentAt": "Sent {{date}} at {{price}}"
+    }
+  },
+  "photos": {
+    "label": "Property photos",
+    "maxReached": "Up to {{max}} photos per property",
+    "skipped_one": "{{count}} file skipped — JPG, PNG or WEBP only",
+    "skipped_other": "{{count}} files skipped — JPG, PNG or WEBP only",
+    "onlyFit_one": "Only {{count}} more photo fits",
+    "onlyFit_other": "Only {{count}} more photos fit",
+    "couldntUpload": "Couldn't upload {{name}}",
+    "added_one": "{{count}} photo added",
+    "added_other": "{{count}} photos added",
+    "removedNotDeleted": "Photo removed here, but couldn't delete it from storage",
+    "processing": "Processing photos…",
+    "upload": "Upload photos — or drop them here",
+    "note": "JPG, PNG or WEBP · up to {{max}} photos · the first one is the cover shown everywhere.",
+    "alt": "Photo {{n}}",
+    "cover": "COVER",
+    "makeCover": "Make cover",
+    "remove": "Remove photo",
+    "uploadFailed": "Photo upload failed (HTTP {{status}})",
+    "deleteFailed": "Photo delete failed (HTTP {{status}})"
+  },
+  "portal": {
+    "published": "PUBLISHED",
+    "notPublished": "Not published",
+    "listingId": "Listing ID",
+    "listingUrl": "Listing URL",
+    "pairNeedsUrl": "Add the listing URL too — you'll want to open it when a caller quotes this ID.",
+    "pairNeedsId": "Add the listing ID as well, so callers quoting it find this property."
+  },
+  "picker": {
+    "chooseDifferent": "Choose a different property",
+    "placeholder": "Listing ID, address or district — e.g. 1945621",
+    "noMatch": "Nothing of yours matches \"{{query}}\".",
+    "matched": "Matched: {{label}}"
+  },
+  "gallery": {
+    "empty": "No photos yet",
+    "emptyHint": "Properties you type in by hand start empty. Imported listings bring their photos with them.",
+    "addPhotos": "Add photos",
+    "previous": "Previous photo",
+    "next": "Next photo"
+  },
+  "import": {
+    "title": "Import property",
+    "subtitle": "Paste a listing link or ID. Agent OS reads the public details; you add the private half after the owner call.",
+    "inputLabel": "Listing URL or ID",
+    "inputPlaceholder": "https://www.myhome.ge/pr/1748902/ or 1748902",
+    "source": "Source",
+    "detectAuto": "Detect automatically",
+    "import": "Import",
+    "myhomeSample": "MyHome sample",
+    "ssSample": "SS.ge sample",
+    "pickPortal": "Pick a portal above — a listing number on its own doesn't say which site it came from.",
+    "couldntCopyPhotos": "Couldn't copy the listing's photos",
+    "copyPhotosFailed": "Copying the listing's photos failed (HTTP {{status}})",
+    "stage": {
+      "fetching": "Fetching listing…",
+      "parsing": "Parsing property…",
+      "preparing": "Preparing preview…"
+    },
+    "errors": {
+      "invalid_input": "That doesn't look like a listing link or ID. Paste the full URL, or the listing number with a portal selected.",
+      "unsupported_source": "Agent OS can't import from that site yet. MyHome.ge and SS.ge are supported.",
+      "service_unavailable": "Importing needs the AgentOS extension. Install or update it, make sure it's switched on, then try again.",
+      "not_found": "That listing wasn't found on the portal. It may have been removed.",
+      "unknown": "There was a server-side error, try again."
+    },
+    "duplicate": {
+      "title": "This listing has already been imported",
+      "body": "{{property}} already carries {{ref}}.",
+      "open": "Open existing property"
+    },
+    "failed": "Import failed",
+    "preview": {
+      "title": "Import preview",
+      "simulated": "SIMULATED DEMO LISTING",
+      "noImages": "No images found on this listing.",
+      "propertyType": "Property type",
+      "dealType": "Deal type",
+      "price": "Price",
+      "city": "City",
+      "district": "District",
+      "notRecognised": "{{district}} — not recognised",
+      "address": "Address",
+      "area": "Area",
+      "rooms": "Rooms",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "floor": "Floor",
+      "condition": "Condition",
+      "images": "Images",
+      "imagesFound": "{{count}} found",
+      "features": "Features",
+      "description": "Description",
+      "sourceListing": "Source listing",
+      "openSource": "Open source listing"
+    },
+    "stillNeeds": {
+      "title": "Still needs you — after the owner call",
+      "contactType": "Contact type",
+      "cooperation": "Agency cooperation",
+      "commissionModel": "Commission model",
+      "commissionPct": "Commission %",
+      "negotiable": "Negotiable amount (owner minimum)",
+      "notes": "Private notes",
+      "body": "A public advert can't say who is really selling or what they'll pay you, so the property saves as \"needs verification\" with the private side left unconfirmed."
+    },
+    "cancel": "Cancel",
+    "copyingPhotos": "Copying photos…",
+    "confirm": "Confirm import",
+    "supported": {
+      "title": "Supported sources",
+      "live": "Live",
+      "needsService": "Needs import service",
+      "viaService": "Listings are read through the AgentOS extension, in your own browser.",
+      "noService": "Portals block direct browser requests, so live fetching runs through an import service you host. Until one is connected, only the two sample links resolve — and they are clearly marked as simulated."
+    },
+    "extension": {
+      "title": "Browser extension",
+      "body": "AgentOS uses its browser extension to import from and publish to MyHome.ge and SS.ge with your own accounts.",
+      "install": "Install extension"
+    },
+    "why": {
+      "title": "Why import beats typing",
+      "manual": "Manual entry",
+      "manualTime": "3–4 minutes per property",
+      "import": "Import",
+      "importTime": "About 20 seconds, then the owner call"
+    }
+  }
+}

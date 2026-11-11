@@ -1,0 +1,163 @@
+{
+  "auth": {
+    "pendingTitle": "Wait for the verification from Agent OS.",
+    "pendingBody": "<strong>{{email}}</strong> is signed in but hasn't been approved yet. This page updates on its own once that happens — no need to keep refreshing.",
+    "signOut": "Sign out",
+    "checkEmail": "Check <strong>{{email}}</strong> for a confirmation link. This page moves on by itself once you click it — even if you do it in another tab.",
+    "backToSignIn": "Back to sign in",
+    "signInIntro": "Sign in to your account.",
+    "signUpIntro": "Create an account to get started.",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "you@agency.ge",
+    "pleaseWait": "Please wait…",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "switchToSignUp": "Need an account? Sign up",
+    "switchToSignIn": "Already have an account? Sign in",
+    "errors": {
+      "invalid_credentials": "Wrong email or password.",
+      "user_already_exists": "An account with this email already exists.",
+      "email_not_confirmed": "Confirm your email first — check your inbox for the link.",
+      "weak_password": "Choose a stronger password (at least 6 characters).",
+      "over_email_send_rate_limit": "Too many emails sent. Wait a minute and try again."
+    },
+    "forgotPassword": "Forgot password?",
+    "resetIntro": "Enter your email and we'll send you a link to set a new password.",
+    "sendResetLink": "Send reset link",
+    "resetSent": "If <strong>{{email}}</strong> has an Agent OS account, a link to set a new password is on its way. Check spam too.",
+    "newPasswordTitle": "Set a new password",
+    "newPassword": "New password",
+    "savePassword": "Save password",
+    "alreadyRegistered": "Already have an account with this email? No email is sent in that case. Sign in, or use \"Forgot password?\"."
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Your account, your agency, and what leaves your workspace.",
+    "language": {
+      "title": "Language",
+      "hint": "Changes the language of the whole app on this browser."
+    },
+    "profile": {
+      "title": "Profile",
+      "name": "Name",
+      "phone": "Phone",
+      "city": "City",
+      "email": "Email",
+      "emailHint": "Your sign-in address — it can't be changed here.",
+      "save": "Save profile"
+    },
+    "agency": {
+      "title": "Agency",
+      "current": "Current agency",
+      "none": "No agency yet",
+      "joinCode": "Join code",
+      "joinCodeNote": "Give this code only to colleagues — anyone with it can join and see what you share.",
+      "sharedNow": "Records shared right now",
+      "changeWarning": "Changing your agency stops sharing every property and client requirement you shared with {{agency}}.",
+      "joinPrompt": "Join your agency to share properties and client requirements with colleagues.",
+      "staysPut": "Your own properties, clients, requirements, tasks and history stay exactly where they are.",
+      "change": "Change agency",
+      "join": "Join an agency"
+    },
+    "privacy": {
+      "title": "Data & privacy",
+      "ownerPrivate": "Owner names, phones and private notes are never shared with colleagues",
+      "clientPrivate": "Client names and phone numbers are never part of a shared requirement",
+      "privateRequirements": "Private requirements never take part in agency-wide matching",
+      "nothingSent": "Nothing is ever sent to a client without you pressing send",
+      "export": "Export my data"
+    },
+    "subscription": {
+      "title": "Subscription",
+      "trialEnded": "Trial ended",
+      "freeTrial": "Free trial",
+      "readOnlyUntilUpgrade": "Read-only until you upgrade",
+      "fullAccess": "Full access during the trial",
+      "badgeReadOnly": "READ-ONLY",
+      "badgeActive": "ACTIVE",
+      "currentPlan": "Current plan",
+      "afterTrial": "After the trial",
+      "agentPlan": "Agent plan",
+      "includes": "Includes",
+      "fullWorkspace": "Full Agent OS workspace",
+      "pricingNote": "Pricing isn't set yet — checkout gets connected later.",
+      "upgrade": "Upgrade plan",
+      "checkoutLater": "Checkout will be connected later"
+    },
+    "security": {
+      "title": "Security",
+      "signIn": "Sign-in",
+      "twoFactor": "Two-factor",
+      "notEnabled": "Not enabled",
+      "changePassword": "Change password",
+      "resetLinkToast": "A link to set a new password was sent to your email",
+      "signOutEverywhere": "Sign out everywhere",
+      "signedOutToast": "Signed out of other devices",
+      "signOut": "Sign out"
+    },
+    "demo": {
+      "title": "Demo controls",
+      "body": "For walkthroughs — preview the read-only state after a trial ends. This only changes your view for this session; your real trial status is managed by an admin.",
+      "trialActive": "Trial active",
+      "trialExpired": "Trial expired",
+      "overrideNote": "Testing override is on — the app stays fully editable whichever state is selected. Set TESTING_FULL_ACCESS to false to restore normal trial behaviour."
+    }
+  },
+  "trial": {
+    "title": "Your free trial has ended",
+    "subtitle": "Your data is safe and stays available in read-only mode.",
+    "properties": "Properties",
+    "clients": "Clients",
+    "sentRecords": "Sent records",
+    "canStill": "You can still",
+    "can": {
+      "browse": "Browse every property",
+      "clients": "Open client profiles",
+      "history": "Read sent history and feedback",
+      "tasks": "Review your task history",
+      "export": "Export everything"
+    },
+    "paused": "Paused until you upgrade",
+    "pausedItems": {
+      "add": "Adding properties or clients",
+      "requirements": "Creating requirements and matches",
+      "tasks": "Creating tasks",
+      "share": "Sharing with your agency",
+      "offers": "Sending offers"
+    },
+    "yourData": "Your data belongs to you.",
+    "yourDataBody": "Nothing is deleted when a trial ends. Export it any time, with or without a subscription.",
+    "upgrade": "Upgrade plan",
+    "checkoutToast": "Checkout is out of scope for this demo",
+    "export": "Export my data",
+    "keepLooking": "Keep looking around"
+  },
+  "help": {
+    "title": "Help & feedback",
+    "subtitle": "Four flows cover almost everything an agent does in a day.",
+    "journeys": {
+      "import": {
+        "title": "Import a property in 20 seconds",
+        "path": "Import → paste a MyHome.ge link → review → save"
+      },
+      "match": {
+        "title": "Find the right flat for a client",
+        "path": "Clients → open a client → Find Matches"
+      },
+      "offer": {
+        "title": "Send an offer without mistakes",
+        "path": "Matching → select → confirm prices → share via WhatsApp"
+      },
+      "share": {
+        "title": "Share with a colleague safely",
+        "path": "Property → Share with Agency → see exactly what stays private"
+      }
+    },
+    "feedbackTitle": "Tell us what's missing",
+    "feedbackBody": "This is an early build shaped by agents in Tbilisi. If something slows you down, say so — it goes straight into the backlog.",
+    "feedbackPlaceholder": "What would make your day easier?",
+    "send": "Send feedback",
+    "sentToast": "Thanks — feedback sent"
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "app": {
+    "name": "Agent OS",
+    "readOnlyBanner": "Your trial has ended — you can read everything, but changes are paused.",
+    "seeOptions": "See options"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "properties": "Properties",
+    "clients": "Clients",
+    "tasks": "Tasks",
+    "shared": "Shared",
+    "import": "Import",
+    "inquiries": "Inquiries",
+    "archive": "Archive & Trash",
+    "settings": "Settings",
+    "help": "Help / Feedback",
+    "admin": "Admin",
+    "home": "Home",
+    "more": "More"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "open": "Open",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "add": "Add",
+    "remove": "Remove",
+    "restore": "Restore",
+    "search": "Search",
+    "copy": "Copy",
+    "copied": "Copied",
+    "continue": "Continue",
+    "retry": "Try again",
+    "loading": "Loading…",
+    "saving": "Saving…"
+  },
+  "enums": {
+    "district": {
+      "Vake": "Vake",
+      "Saburtalo": "Saburtalo",
+      "Vera": "Vera",
+      "Mtatsminda": "Mtatsminda",
+      "Sololaki": "Sololaki",
+      "Old Tbilisi": "Old Tbilisi",
+      "Avlabari": "Avlabari",
+      "Chugureti": "Chugureti",
+      "Didube": "Didube",
+      "Dighomi": "Dighomi",
+      "Didi Dighomi": "Didi Dighomi",
+      "Digomi Massive": "Digomi Massive",
+      "Vashlijvari": "Vashlijvari",
+      "Nadzaladevi": "Nadzaladevi",
+      "Gldani": "Gldani",
+      "Mukhiani": "Mukhiani",
+      "Isani": "Isani",
+      "Samgori": "Samgori",
+      "Varketili": "Varketili",
+      "Vazisubani": "Vazisubani",
+      "Krtsanisi": "Krtsanisi",
+      "Ortachala": "Ortachala",
+      "Lisi": "Lisi",
+      "Bagebi": "Bagebi",
+      "Tskneti": "Tskneti"
+    },
+    "city": {
+      "Tbilisi": "Tbilisi"
+    },
+    "propertyType": {
+      "Any": "Any",
+      "Apartment": "Apartment",
+      "House": "House",
+      "Townhouse": "Townhouse",
+      "Commercial": "Commercial",
+      "Land": "Land"
+    },
+    "condition": {
+      "Any": "Any",
+      "Newly renovated": "Newly renovated",
+      "Old renovation": "Old renovation",
+      "White frame": "White frame",
+      "Green frame": "Green frame",
+      "Black frame": "Black frame"
+    },
+    "buildingType": {
+      "New building": "New building",
+      "Old build": "Old build",
+      "Soviet series": "Soviet series",
+      "Villa": "Villa"
+    },
+    "contactType": {
+      "Owner": "Owner",
+      "Agent": "Agent",
+      "Agency": "Agency",
+      "Unknown": "Unknown"
+    },
+    "commissionModel": {
+      "Commission On Top": "Commission On Top",
+      "Commission Included": "Commission Included"
+    },
+    "archiveReason": {
+      "Sold": "Sold",
+      "Rented": "Rented",
+      "No longer available": "No longer available",
+      "Inactive": "Inactive",
+      "Other": "Other"
+    },
+    "feedback": {
+      "No Response": "No Response",
+      "Viewed": "Viewed",
+      "Interested": "Interested",
+      "Wants Showing": "Wants Showing",
+      "Too Expensive": "Too Expensive",
+      "Not Interested": "Not Interested"
+    },
+    "dealType": {
+      "Any": "Any",
+      "Sale": "Sale",
+      "Rent": "Rent",
+      "Daily rent": "Daily rent"
+    },
+    "propertyStatus": {
+      "active": "Active",
+      "needs_verification": "Needs verification",
+      "archived": "Archived"
+    },
+    "lifecycle": {
+      "active": "Active",
+      "paused": "Paused",
+      "closed": "Closed"
+    },
+    "taskType": {
+      "Call": "Call",
+      "Follow-up": "Follow-up",
+      "Meeting": "Meeting",
+      "Verification": "Verification",
+      "Other": "Other"
+    },
+    "yesNo": {
+      "Yes": "Yes",
+      "No": "No",
+      "Unknown": "Unknown"
+    },
+    "floorPref": {
+      "Any": "Any",
+      "Not ground floor": "Not ground floor",
+      "Not top floor": "Not top floor",
+      "Above 3rd floor": "Above 3rd floor"
+    },
+    "trashKind": {
+      "Property": "Property",
+      "Client": "Client"
+    },
+    "source": {
+      "Manual": "Manual",
+      "MyHome.ge": "MyHome.ge",
+      "SS.ge": "SS.ge"
+    }
+  },
+  "dates": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "monthsLong": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "days": [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat"
+    ],
+    "daysLong": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "short": "{{month}} {{day}}",
+    "long": "{{weekday}}, {{month}} {{day}}",
+    "withWeekday": "{{weekday}}, {{month}} {{day}}",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "yesterday": "Yesterday",
+    "noDate": "No date",
+    "goodMorning": "Good morning",
+    "goodAfternoon": "Good afternoon",
+    "goodEvening": "Good evening"
+  },
+  "format": {
+    "from": "from {{value}}",
+    "upTo": "up to {{value}}",
+    "areaPlus": "{{value}}+ m²",
+    "areaUpTo": "up to {{value}} m²",
+    "area": "{{value}} m²"
+  },
+  "ui": {
+    "noPhoto": "No photo available",
+    "badge": {
+      "active": "ACTIVE",
+      "needsVerification": "NEEDS VERIFICATION",
+      "archived": "ARCHIVED",
+      "shared": "SHARED · {{name}}",
+      "myPropertyShared": "MY PROPERTY · SHARED",
+      "myProperty": "MY PROPERTY"
+    },
+    "card": {
+      "favorite": "Favorite",
+      "facts": "{{area}} m² · {{count}} Bedrooms · Floor {{floor}}/{{floors}}",
+      "parking": " · Parking",
+      "needsCheck": "Needs a check · last verified {{date}}",
+      "verified": "Verified {{date}}",
+      "open": "Open",
+      "addTask": "Add task",
+      "stopSharing": "Stop sharing",
+      "shareWithAgency": "Share with agency",
+      "archive": "Archive"
+    },
+    "task": {
+      "openClient": "Open {{name}}",
+      "openProperty": "Open property",
+      "markNotDone": "Mark as not done",
+      "markComplete": "Mark complete",
+      "edit": "Edit task",
+      "delete": "Delete task"
+    },
+    "calc": {
+      "title": "Price calculation",
+      "portalPrice": "Original portal price",
+      "ownerReceives": "Owner receives",
+      "yourCommission": "Your commission",
+      "myListingPrice": "My listing price",
+      "suggests": "Agent OS suggests {{price}} for this setup — you are advertising your own figure.",
+      "explainIncluded": "The owner's advertised price already contains your commission.",
+      "explainOnTop": "The owner keeps their advertised price in full; your commission is what you list above it."
+    }
+  },
+  "shell": {
+    "noAgency": "No agency",
+    "trialEnded": "Read-only · trial ended",
+    "trialActive": "Full access during the trial",
+    "searchPlaceholder": "Search properties, clients, tasks…",
+    "noResults": "No results for \"{{query}}\"",
+    "properties": "Properties",
+    "clients": "Clients",
+    "tasks": "Tasks",
+    "addProperty": "Add Property",
+    "importProperty": "Import Property",
+    "addClient": "Add Client",
+    "addTask": "Add Task",
+    "logInquiry": "Log Inquiry",
+    "quickAdd": "Quick Add",
+    "overdueTasks_one": "{{count}} overdue task",
+    "overdueTasks_other": "{{count}} overdue tasks"
+  },
+  "domain": {
+    "propertyRemoved": "Property removed",
+    "notSpecified": "Not specified",
+    "internalListing": "Agent OS listing",
+    "sourceRef": "Source · {{source}} {{ref}}",
+    "match": {
+      "differentDistrict": "Different district — {{district}}",
+      "bedrooms": "{{count}} Bedrooms",
+      "bedroomsShort_one": "{{count}} bedroom short of preference",
+      "bedroomsShort_other": "{{count}} bedrooms short of preference",
+      "parking": "Parking",
+      "noParking": "No confirmed parking",
+      "aboveBudget": "{{amount}} above budget",
+      "belowBudget": "{{amount}} below minimum budget",
+      "withinBudget": "Within Budget",
+      "belowArea": "{{value}} m² below preferred area",
+      "aboveArea": "{{value}} m² above preferred area",
+      "typeIs": "Type is {{type}}",
+      "needsVerification": "Needs verification before offering",
+      "lastVerified_one": "Last verified {{count}} day ago",
+      "lastVerified_other": "Last verified {{count}} days ago"
+    }
+  },
+  "activity": {
+    "imported": "Imported from {{source}}",
+    "importedRef": "Imported from {{source}} · {{ref}}",
+    "created": "Property created",
+    "updated": "Property details updated",
+    "archived": "Archived — {{reason}}",
+    "reactivated": "Reactivated",
+    "published": "Published on {{portal}} — #{{id}}",
+    "sharedWith": "Shared with {{agency}}",
+    "sharingStopped": "Sharing stopped",
+    "verified": "Marked as verified",
+    "sentTo": "Sent to {{name}} at {{price}}",
+    "fromInquiry": "Created from an inquiry.",
+    "fromInquiryAbout": "Created from an inquiry about {{property}}."
+  },
+  "toast": {
+    "readOnly": "Read-only mode — upgrade to make changes",
+    "reverted": "{{error}} — change reverted",
+    "couldntSave": "Couldn't save {{what}}",
+    "couldntSaveActivity": "Couldn't save activity history",
+    "couldntLoad": "Couldn't load {{what}}: {{error}}",
+    "serverError": "server error",
+    "what": {
+      "changes": "changes",
+      "client": "client",
+      "requirement": "requirement",
+      "property": "property",
+      "task": "task",
+      "inquiry": "inquiry",
+      "offer": "offer",
+      "trash": "Recently Deleted",
+      "profile": "your profile",
+      "properties": "properties",
+      "clients": "clients",
+      "requirements": "requirements",
+      "sharedRequirements": "shared requirements",
+      "tasks": "tasks",
+      "sentOffers": "sent offers",
+      "inquiries": "inquiries",
+      "activity": "activity history",
+      "favorite": "favorite",
+      "feedback": "feedback",
+      "archive": "archive",
+      "delete": "delete",
+      "permanentDelete": "permanent delete",
+      "publishedId": "published listing ID",
+      "restore": "restore",
+      "sharing": "sharing"
+    },
+    "propertySaved": "Property saved",
+    "propertyUpdated": "Property updated",
+    "couldntSaveProperty": "Couldn't save property",
+    "addedFavorite": "Added to favorites",
+    "removedFavorite": "Removed from favorites",
+    "archivedAs": "Property archived as \"{{reason}}\"",
+    "activeAgain": "Property is active again",
+    "movedToTrash": "Moved to Recently Deleted",
+    "joinAgencyFirst": "Join an agency in Settings before sharing",
+    "sharedWith": "Shared with {{agency}}",
+    "stoppedSharing": "Stopped sharing",
+    "verifiedToday": "Marked as verified today",
+    "clientCreated": "Client created",
+    "clientUpdated": "Client updated",
+    "requirementUpdated": "Requirement updated",
+    "requirementCreated": "Requirement created",
+    "requirementResumed": "Requirement resumed",
+    "requirementPaused": "Requirement paused",
+    "requirementClosed": "Requirement closed",
+    "requirementShared": "Requirement shared with {{agency}} — client stays anonymous",
+    "requirementUnshared": "Stopped sharing requirement",
+    "taskCreated": "Task created",
+    "taskUpdated": "Task updated",
+    "taskCompleted": "Task completed",
+    "taskDeleted": "Task deleted",
+    "markedAs": "Marked as \"{{feedback}}\"",
+    "inquirySaved": "Inquiry saved",
+    "addedToClients": "{{name}} added to your clients",
+    "inquiryRemoved": "Inquiry removed",
+    "clientRestored": "{{name}} is back in your clients",
+    "restored": "{{name}} restored",
+    "purged": "Permanently deleted",
+    "agencyChanged_one": "Agency changed to {{agency}} — {{count}} shared record was unshared",
+    "agencyChanged_other": "Agency changed to {{agency}} — {{count}} shared records were unshared",
+    "agencyChangedNone": "Agency changed to {{agency}}",
+    "couldntChangeAgency": "Couldn't change agency",
+    "previewReadOnly": "Read-only preview for this session",
+    "fullAccess": "Back to full access",
+    "profileSaved": "Profile saved",
+    "couldntSaveProfile": "Couldn't save profile"
+  },
+  "errors": {
+    "requestFailed": "Request failed (HTTP {{status}})",
+    "server": {
+      "missingPortalToken": "Missing portal token — open the portal while signed in, then try again.",
+      "badRequest": "The request was malformed. Reload and try again.",
+      "propertyNotFound": "Property not found",
+      "ssEmpty": "SS.ge returned an empty response",
+      "idNumeric": "The ID must be a number",
+      "trialEnded": "Your trial has ended, so your workspace is read-only",
+      "pendingApproval": "Your account is pending approval from Agent OS",
+      "notOwnerProperty": "You do not own this property",
+      "notOwnerPhoto": "You do not own this photo",
+      "conflict": "This property was changed somewhere else (another tab or device). Reload to see the latest, then make your change again.",
+      "notFound": "Not found",
+      "myhomeEmpty": "MyHome returned an empty response",
+      "myhomePhotoNotStored": "MyHome accepted the photo but did not store it, so nothing was published",
+      "noSession": "You are signed out. Sign in again.",
+      "sessionExpired": "Your session expired. Sign in again.",
+      "myhomeLocations": "Could not search MyHome locations",
+      "exchangeRate": "Could not get the USD/GEL exchange rate",
+      "agentNotFound": "Agent not found",
+      "agencyRequired": "Agency name is required",
+      "adminRequired": "Admin access required"
+    }
+  }
+}

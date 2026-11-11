@@ -1,17 +1,33 @@
 {
   "manifest_version": 3,
-  "name": "myhome.ge Token Grabber",
-  "version": "0.1.0",
-  "description": "Captures your myhome.ge global-authorization token so you don't have to copy it from DevTools.",
-  "permissions": ["webRequest", "storage"],
-  "host_permissions": ["*://*.tnet.ge/*", "*://*.myhome.ge/*"],
+  "name": "AgentOS Extension",
+  "version": "1.1.1",
+  "description": "Connects AgentOS to your MyHome.ge and SS.ge accounts so you can import and publish listings.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArsSPiUF5uS8sXBAnoIcopahMxrEsjnwc/rGtHJZd7gNV3aFA7M2u9ImT2f+TkSMOUtnZ1QvptCG2gu4ahAdh4FJJD2jni2KoYTJRnB79EYaGpHVCiEjGHcskf4UYh5o3qrGRmP54XIqUqDasKfi/5O+R5+wmb3OvqWgYqnzXDMEf/JTn2P44IoEBcb/88LhoQ6ifESDOcaNure49R5LZ9t6Vof/9JaWkGZb9POpblMPZmEo84nTrkflbFPN/u47OeyOHiEQK+fai/8EW/N3pZ9pLBHYxu2/d+t7L9kaPJc5938xCMOTqjDyFYaeBPAI9eQJ4JwKXB98fwh2x+vjqEwIDAQAB",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.tnet.ge/*",
+    "*://*.myhome.ge/*",
+    "*://*.my.ge/*",
+    "*://*.ss.ge/*",
+    "https://res.cloudinary.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
+    "default_title": "AgentOS",
     "default_popup": "popup.html"
   },
   "externally_connectable": {
-    "matches": ["http://localhost:5173/*"]
+    "matches": [
+      "https://agentos.ge/*",
+      "https://portal.agentos.ge/*",
+      "http://localhost:5173/*"
+    ]
   }
 }

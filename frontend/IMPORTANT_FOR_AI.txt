@@ -1,0 +1,250 @@
+AGENT OS — FRONTEND CONVENTIONS
+================================
+Read this before touching src/. It reflects what is ACTUALLY in the code today,
+not an aspirational standard — if you change a convention, update this file
+in the same commit.
+
+WHAT THIS APP IS
+-----------------
+A CRM for Tbilisi real-estate agents, ported from a single-file reference demo
+into this project's structure (vite + react + valtio + ts frontend, Koa
+backend in ../backend, Supabase Postgres with RLS). The reference demo and its
+docs (files/BACKEND_HANDOFF.md, DATA_MODEL.md, API_CONTRACTS.md,
+DEMO_ONLY_AND_TODO.md) are NOT in this repo. Where this file and the code
+disagree with what you remember of them, the code and this file win.
+
+Do not silently "fix" something that looks odd (e.g. ownerNet being a dead
+field) without asking — the business rules below are deliberate.
+
+STYLING — USE THE EXISTING CSS SYSTEM, NOT TAILWIND UTILITIES
+----------------------------------------------------------------
+All visual styling lives in src/styles/agent-os.css, copied verbatim from the
+reference build. It defines CSS variables (--navy, --teal, --amber, --brick,
+--border, --radius, etc.) and component classes: .card, .btn / .btn-primary /
+.btn-secondary / .btn-teal / .btn-danger, .badge / .badge-teal / .badge-amber,
+.tab, .chip, .field / .input / .select / .textarea, .prop-card, .task-row,
+.modal, .sidebar, .topbar, and so on.
+
+  - Use these existing classes. Do not rewrite a screen in Tailwind utility
+    classes — that breaks pixel-fidelity with the reference design and
+    fragments the styling into two competing systems.
+  - Tailwind IS installed (@tailwindcss/vite, index.css imports it) but is
+    not the primary styling method. It's there if a future redesign wants
+    it — don't reach for it piecemeal on individual components.
+  - New UI pattern needed? Add a class to agent-os.css using the existing
+    CSS variables and naming style (kebab-case, terse, e.g. .picker-item),
+    not a new ad-hoc design language. Match the existing spacing/radius/
+    shadow scale instead of inventing new values.
+  - Inline `style={{}}` is used throughout (matching the original) for
+    one-off layout tweaks (gaps, widths, flex). That's fine and consistent
+    with the existing code — don't feel obligated to extract every inline
+    style into a class.
+
+STATE MANAGEMENT — VALTIO FOR SHARED DATA, useState FOR LOCAL UI STATE
+--------------------------------------------------------------------------
+Global/shared state lives in ONE Valtio proxy: src/store/store.ts (`store`).
+This holds: properties, clients, requirements, tasks, sent, inquiries, trash,
+activity, settings, toasts, hydrated, route, modal, drawer, sheet.
+
+  - Never create a second global store (no Redux, Zustand, Context-based
+    store, etc.) — everything shared goes through this one proxy.
+  - Never mutate `store.x` directly from a page/component. All writes go
+    through the `api.*` methods in store.ts (api.saveProperty, api.addTask,
+    api.shareProperty, ...). Each api.* action updates the store
+    optimistically and sends the matching backend call; a failed call
+    reverts the change and toasts. New records get a browser-generated UUID
+    (lib/http.ts newId) so the optimistic row and the database row agree.
+  - Read shared state via the `useApp()` hook (src/store/store.ts) ONLY.
+    Every page/component does `const { properties, api, sel, nav, ... } =
+    useApp()`. Don't import `store` + call `useSnapshot` yourself in a
+    component — keep the one access pattern.
+  - Navigation (`route`) and modals (`modal`) are ALSO in the Valtio store,
+    not React Router and not local state — this is a deliberate port of the
+    original's in-memory router (no URL sync, no history). Use `nav(name,
+    params)` / `openModal(type, props)` / `closeModal()` from useApp().
+    If you add real URL routing later, that's a real architectural change —
+    discuss it, don't bolt react-router on top quietly.
+
+Local, ephemeral, single-component UI state uses plain `useState`/`useRef`,
+same as the original app:
+  - Form drafts before Save is pressed (e.g. PropertyFormModal's `f` state)
+  - Search box text, active tab, filter-panel-open, which photo index is showing
+  - Anything that would be wrong to make reactive app-wide, or that should be
+    thrown away if the user closes a modal without saving
+
+Rule of thumb: if losing it on a re-render/unmount is fine and no other
+component needs to see it, it's useState. If other screens need to see it,
+or it needs to survive navigation, it goes in the Valtio store via api.*.
+
+DATA MODEL / TYPES
+-------------------
+src/types.ts is the single source of truth for entity shapes (Property,
+Client, Requirement, Task, Inquiry, SentProperty, TrashItem, Settings, etc).
+Update it there first when adding a field, then propagate. Field names map
+1:1 to snake_case columns in the backend controllers' field maps.
+
+BUSINESS RULES THAT MUST NOT BE SILENTLY CHANGED
+----------------------------------------------------
+These are called out with `// BACKEND:` comments in the source where they
+matter:
+
+  - Private property fields (contactName, contactPhone, notes, portalPrice,
+    commissionModel, commissionPct, negotiableTo, ownerNet) must never be
+    shown for a property where `mine === false` (an incoming colleague
+    share). See isAccessibleProperty / SourceBadge / the Owner & Commission
+    tab logic — don't add a code path that leaks these for shared properties.
+  - Commission math (src/lib/domain.ts: calcPricing, recommendedListingPrice,
+    recommendedOwnerFloor) has exact approved formulas for the two commission
+    models. Don't "simplify" the math or reintroduce a third model
+    ("Owner Net Amount") — it was explicitly removed.
+  - Matching (src/lib/domain.ts: runMatching) must stay deterministic,
+    client-side, and explainable (matched[] / diffs[] shown verbatim to the
+    agent). Never replace it with an AI/opaque scorer.
+  - Source listing (source/sourceRef/sourceUrl — where a property was FOUND)
+    vs. My Published Listings (myHomeListingId/myHomeListingUrl/ssListingId/
+    ssListingUrl — the agent's OWN adverts) are different concepts. Import
+    only ever writes the former.
+  - An inquiry's `listingReference` is a historical snapshot, written once.
+    Never recompute it from the property's current portal fields.
+  - Importing from MyHome.ge/SS.ge is real and server-side
+    (backend/src/controllers/importController.js); src/lib/import.ts only
+    parses the input, calls it, and normalises the result. Never scrape
+    from the browser — portals block it (no CORS). Values the portal doesn't
+    give stay blank (sent as "" and stored as NULL by the backend); a district
+    outside the known Tbilisi list keeps the portal's own wording.
+  - Publishing a property: src/lib/publish.ts maps public fields onto each
+    portal's payload, and PublishListingModal confirms before anything goes
+    live. Never add a private field to those payloads. The advert's phone is
+    the agent's own portal number, never the property's contactPhone.
+
+FOLDER LAYOUT
+--------------
+  src/store/store.ts        Valtio proxy + hydrate() + all api.* mutations + useApp() + nav/modal state
+  src/data/defaults.ts      defaults for a brand-new property/requirement/task (no data)
+  src/data/constants.ts     enums (DISTRICTS, PROPERTY_TYPES, ...) + nav config
+  src/lib/http.ts           authenticated JSON request() to the backend, newId()
+  src/lib/workspaceApi.ts   clients, requirements, tasks, inquiries, sent, activity, me
+  src/lib/propertiesApi.ts  properties + favorites
+  src/lib/domain.ts         matching engine, commission calc, search/reference matching
+  src/lib/import.ts         MyHome/SS.ge input parsing + normalisation of the backend preview
+  src/lib/photo.ts          client-side photo downscale/upload handling
+  src/lib/dates.ts          Tbilisi-local date helpers (TODAY, D(), fmtDate, relDay, ...)
+  src/lib/format.ts         usd(), initials(), uid(), parseMoney()
+  src/types.ts              all entity TypeScript types
+  src/components/ui.tsx     shared primitives (Modal, Field, Badge, PropertyCard, ...)
+  src/components/shell.tsx  sidebar, topbar, mobile nav, global search
+  src/components/property.tsx  PhotoUploader, PropertyPicker, PortalRow, Gallery
+  src/components/modals.tsx    every form/confirmation modal + ModalHost
+  src/pages/*.tsx           one file per screen, wired into App.tsx's Screen() switch
+
+New screen -> add to src/pages, wire it into the switch in App.tsx and (if it
+needs a nav entry) into NAV/NAV_BOTTOM in src/data/constants.ts.
+New shared primitive -> src/components/ui.tsx. Don't create a components/
+subfolder per component; this project keeps related primitives grouped in
+one file per concern (ui / shell / property / modals), matching the size of
+the app so far. If a single file gets unwieldy, split by screen area, not by
+one-component-per-file.
+
+DATA LIVES IN THE DATABASE
+---------------------------
+Every record is in Supabase Postgres, reached through the backend (which
+queries as the signed-in agent, so RLS applies):
+  properties (+ properties_view, property_favorites), clients, requirements,
+  colleague_requirements (view), tasks, inquiries, sent_properties,
+  trash_items, activity_log, profiles/agencies (via the agent_settings view).
+The store is only a cache: hydrate(userId) loads everything once per
+signed-in agent and is idempotent (safe under StrictMode); signing out clears
+it. Nothing is persisted in browser storage. "Recently Deleted" is the
+trash_items table: a row is written when a property/client is soft-deleted
+(deleted = true) and removed on restore or permanent delete. Schema changes
+go in backend/sql/NNN_*.sql.
+
+TESTING_FULL_ACCESS (src/store/store.ts) is currently `true`, which
+bypasses the read-only/trial-expired system entirely. The read-only logic
+underneath is real and intact — don't delete it because the flag currently
+masks it. The real trial state is profiles.trial_status (admin-only to
+change); the Settings "Demo controls" only preview it for the session.
+
+LANGUAGES (i18n) — ENGLISH + GEORGIAN, NO OTHERS PLANNED
+---------------------------------------------------------
+i18next + react-i18next. Both languages are bundled (src/i18n/index.ts);
+the agent's choice is kept in localStorage ("agentos.lang") — the one
+per-browser UI preference allowed there. First visit: Georgian if the
+browser is Georgian, else English. Switcher: LanguageSwitcher (ui.tsx), shown
+in Settings and on the sign-in screen.
+
+  - NO hard-coded user-visible text. Every label, placeholder, title,
+    aria-label, toast and error goes through t(). Components:
+    useTranslation("<ns>"); plain modules (store, domain, dates):
+    import { t } from "../i18n".
+  - Strings live in src/i18n/locales/{en,ka}/<namespace>.json, one namespace
+    per area (see resources.ts). Add every key to BOTH files — a key missing
+    from Georgian is a TypeScript error, and t("...") only accepts keys that
+    exist in English.
+  - Stored values stay English. Districts, property types, feedback, task
+    types, archive reasons, etc. are identifiers in the database; show them
+    with enumLabel(group, value) / enumOptions(group, values) from
+    src/i18n/labels.ts (labels in common.json → enums). Never compare a
+    translated string in logic (use nearDay() not relDay() text, tab ids not
+    tab labels).
+  - Plurals: t("key", { count }) with key_one / key_other in both files.
+  - Dates: lib/dates.ts formats with the month/day names in common.json.
+  - Activity-log entries and notes generated by the app are stored as text
+    in whatever language the agent was using at the time.
+  - Backend error messages are English; http.ts maps the known ones to
+    common.json → errors.server. A new user-facing backend error needs an
+    entry there.
+  - Switching language remounts <App> (main.tsx), so memoised text rebuilds.
+  - Fonts: Inter/Fraunces have no Georgian glyphs; Noto Sans/Serif Georgian
+    are the fallbacks in agent-os.css.
+
+ICONS
+------
+lucide-react only (already a dependency), matching the original icon set.
+Don't add a second icon library.
+
+TYPESCRIPT
+-----------
+  - Avoid `any`. Form-draft state that doesn't cleanly fit an entity type
+    uses `Partial<Entity>` with a final cast, matching the pattern already
+    used in the modals (see PropertyFormModal, RequirementFormModal) —
+    that's a deliberate, contained pragmatism, not a license to cast freely
+    elsewhere.
+  - `npx tsc -b --noEmit` must stay clean. Run it before considering a
+    change done.
+
+BROWSER EXTENSION (../extension)
+----------------------------------
+Agents install it unpacked from public/agentos-extension.zip (ExtensionModal
+in modals.tsx walks them through it; App.tsx opens that modal on desktop
+Chrome/Edge when a PING to the extension gets no answer). The manifest's
+"key" pins the extension ID that VITE_AGENTOS_EXTENSION_ID points at — never
+remove or change it, or every installed copy stops talking to the site. The
+matching private key (../extension-signing-key.pem) is gitignored. After an
+extension change: bump manifest "version", run ../build-extension-zip.ps1,
+commit the new zip. A new site origin must be added to externally_connectable.
+
+Every MyHome.ge / SS.ge call runs inside the extension (extension/portal.js),
+not on the backend: publishing, photo uploads, import previews, MyHome
+location search and ss.ge streets. The site calls it with callPortal() in
+lib/extension.ts (a PORTAL message) and gets back the portal's own
+{ status, data }. If the site starts relying on something new in the
+extension, also bump MIN_EXTENSION_VERSION in lib/extension.ts: an older
+install then counts as "not installed" and the install modal asks for the
+new zip. The backend keeps only what needs our secrets or database
+(Supabase, Cloudinary, the USD/GEL rate).
+
+WHAT NOT TO DO
+----------------
+  - Don't add a second state library or a second styling system alongside
+    what's here.
+  - Don't route mutations around `api.*` directly into `store.x = ...` from
+    a component.
+  - Don't rename or delete `// BACKEND:` comments — they are the integration
+    map for whoever builds the real backend.
+  - Don't call MyHome/SS with fetch() from the site itself — it can't work
+    (no CORS). Add an op to extension/portal.js and call it via callPortal().
+  - Don't keep app data in localStorage/sessionStorage — it belongs in the
+    database. Don't add demo/seed records to the bundle.
+  - The Admin screen (profiles.role = 'admin') is the only role-based UI;
+    don't add more roles or deal pipelines without discussing it.

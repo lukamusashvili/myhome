@@ -2,3 +2,9 @@ node_modules/
 .env
 *.log
 log.txt
+
+# Private key behind the extension ID in extension/manifest.json — never commit or ship it
+extension-signing-key.pem
+
+# Local notes with database credentials — never commit
+supabase connection.txt
